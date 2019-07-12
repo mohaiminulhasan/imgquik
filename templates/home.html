@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ImgQuik</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <h1>ImgQuik</h1>
+    <h2>Quick & easy placeholder images</h2>
+
+    <div class="grid-container">
+        <div class="grid-item">
+            <h3>Easy</h3>
+            <p>Creating an image on the fly is as easy as a pie with ImgQuik.</p>
+            <p>Simply provide a url in the src attribute of an img tag in your HTML file as follows:</p>
+            <p>
+                <code>&lt;img src="imgquik.herokuapp.com/100x80" /&gt;</code>
+            </p>
+
+            <img src="{% url 'generate_image' 100 80 %}" alt="">
+        </div>
+        <div class="grid-item">
+            <h3>Flexible</h3>
+            <p>ImgQuik provides room for customization of your image dimensions as well as color.</p>
+            <p>
+                <code>&lt;img src="imgquik.herokuapp.com/150x400/CCC/000" /&gt;</code>
+            </p>
+
+            <img src="{% url 'generate_image_two' 150 400 'CCC' '000' %}" alt="">
+        </div>
+        <div class="grid-item">
+            <h3>Fast</h3>
+            <p>Generating images are fast since we make efficient use of your browser's cache.</p>
+
+            <img src="{% url 'generate_image' 100 100 %}" alt="">
+            <img src="{% url 'generate_image' 100 200 %}" alt="">
+            <img src="{% url 'generate_image' 200 100 %}" alt="">
+        </div>
+    </div>
+</body>
+</html>

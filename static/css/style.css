@@ -1,0 +1,22 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: aliceblue;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.grid-container {
+    display: grid;
+    grid-column-gap: 10px;
+    padding: 10px;
+}
+
+@media only screen and (min-width: 768px) {
+    .grid-container {
+        grid-template-columns: 33% 33% 33%;
+    }
+}
+
+h1, h2, h3 {
+    text-align: center;
+}

@@ -4,9 +4,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 SECRET_KEY = 'cv0ij+h-u#ba6*z+@$-j-_4ur)(r13%6ce7rh0wdp3yytua7pr'
 
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['imgquik.herokuapp.com']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
